@@ -27,9 +27,6 @@ function EffectSample() {
     }, [counter])
 
 
-
-
-
     return (
         <>
             <ul>

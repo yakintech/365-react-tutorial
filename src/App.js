@@ -1,5 +1,8 @@
 
 import React from 'react'
+import ProductDetail from './props/ProductDetail'
+import SiteHeader from './props/SiteHeader'
+import SupplierPage from './samples/SupplierPage'
 import CounterStateSample from './stateSample/CounterStateSample'
 import ProductList from './stateSample/ProductList'
 import StateArraySample from './stateSample/StateArraySample'
@@ -9,8 +12,17 @@ import EffectSample from './useEffectSample/EffectSample'
 //Fragment... <></>
 function App() {
 
+  let productDetail = {
+    name: 'IPhone',
+    unitPrice : 5200
+  }
+
   return <>
-  <EffectSample></EffectSample>
+
+  <SupplierPage/>
+      {/* <SiteHeader title='Kampüs 365' subTitle='Yazılım Eğitimleri...'></SiteHeader>
+ 
+    <ProductDetail product={productDetail}></ProductDetail> */}
   </>
 
 }
