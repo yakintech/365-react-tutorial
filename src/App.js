@@ -1,14 +1,16 @@
 
 import React from 'react'
 import CounterStateSample from './stateSample/CounterStateSample'
+import ProductList from './stateSample/ProductList'
 import StateArraySample from './stateSample/StateArraySample'
 import StateArraySample2 from './stateSample/StateArraySample2'
+import EffectSample from './useEffectSample/EffectSample'
 
 //Fragment... <></>
 function App() {
 
   return <>
-  <StateArraySample2></StateArraySample2>
+  <EffectSample></EffectSample>
   </>
 
 }
