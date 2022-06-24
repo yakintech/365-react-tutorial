@@ -1,28 +1,32 @@
-
 import React from 'react'
-import ProductDetail from './props/ProductDetail'
-import SiteHeader from './props/SiteHeader'
-import SupplierPage from './samples/SupplierPage'
-import CounterStateSample from './stateSample/CounterStateSample'
-import ProductList from './stateSample/ProductList'
-import StateArraySample from './stateSample/StateArraySample'
-import StateArraySample2 from './stateSample/StateArraySample2'
-import EffectSample from './useEffectSample/EffectSample'
+import { Link, Route, Routes } from 'react-router-dom'
+import About from './routerSample/About'
+import Contact from './routerSample/Contact'
+import HomePage from './routerSample/HomePage'
+import NotFoundPage from './routerSample/NotFoundPage'
+import TodoDetail from './routerSample/TodoDetail'
+import Todos from './routerSample/Todos'
 
-//Fragment... <></>
 function App() {
 
-  let productDetail = {
-    name: 'IPhone',
-    unitPrice : 5200
-  }
-
   return <>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to='/todos'>Todos</Link>
+      </nav>
 
-  <SupplierPage/>
-      {/* <SiteHeader title='Kampüs 365' subTitle='Yazılım Eğitimleri...'></SiteHeader>
- 
-    <ProductDetail product={productDetail}></ProductDetail> */}
+  <h1>Site Header</h1>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<About />} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/todos' element={<Todos/>} />
+      <Route path='/todos/:id' element={<TodoDetail/>} />
+      <Route path='*' element={<NotFoundPage/>} />
+    </Routes>
+    <p>Site Footer</p>
   </>
 
 }
